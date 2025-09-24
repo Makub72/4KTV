@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* CSS for styling the page */
+:root {
+    --primary-color: #4dd0e1; /* Cyan accent */
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --card-color: #2a2a2a;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --border-color: #444;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+}
+
+.container {
+    max-width: 950px;
+    margin: 25px auto;
+    padding: 25px;
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    border: 1px solid var(--border-color);
+}
+
+header {
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 25px;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-top: 5px;
+}
+
+.tv-link {
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.tv-link:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(77, 208, 225, 0.4);
+}
+
+.tv-link img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.link-caption {
+    display: block;
+    padding: 8px;
+    background-color: rgba(0,0,0,0.6);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.extra-tv-images {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.extra-tv-images .thumbnail {
+    max-width: 30%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.extra-tv-images .thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(77, 208, 225, 0.3);
+}
+
+.tv-price {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+.tv-price .current-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+.tv-price .original-price {
+    text-decoration: line-through;
+    color: var(--text-secondary);
+    margin-right: 15px;
+}
+.tv-price .savings {
+    color: #66bb6a; /* A nice green for savings */
+    font-weight: 600;
+}
+
+.section {
+    margin-bottom: 45px;
+}
+
+.section h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: transparent;
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 5px;
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+ul li strong {
+    color: var(--primary-color);
+    font-weight: 600;
+    min-width: 180px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+ul li .description-text {
+    color: var(--text-primary);
+    font-weight: 400;
+}
+
+/* Mount Types Layout */
+.mount-types {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.mount-type {
+    flex: 1;
+    text-align: center;
+}
+
+.mount-type img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.2s ease;
+}
+
+.mount-type img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(77, 208, 225, 0.3);
+}
+
+.mount-type h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.calculator-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.input-group input {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box; /* Important for padding */
+}
+
+.calculator-form button {
+    background-color: var(--primary-color);
+    color: #121212;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.calculator-form button:hover {
+    background-color: #80deea; /* Lighter cyan */
+}
+
+#standResult {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: 500;
+    display: none; /* Hidden by default */
+}
+
+#standResult.result-error,
+#standResult.result-warning,
+#standResult.result-success {
+    display: block; /* Show when class is added */
+}
+
+.result-error {
+    background-color: #5d2222;
+    border: 1px solid #c53737;
+    color: #ffc1c1;
+}
+
+.result-warning {
+    background-color: #5c4b1e;
+    border: 1px solid #d4a216;
+    color: #fff6d9;
+}
+
+.result-success {
+    background-color: #1e4d2b;
+    border: 1px solid #3c9d5b;
+    color: #d1ffdf;
+}
+
+
+/* Product Grid Layout */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex; 
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.product-card h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.product-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    flex-grow: 1; 
+}
+
+.price-tag {
+    margin-top: auto; 
+    padding: 8px 12px;
+    background-color: var(--primary-color);
+    color: #121212;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 8px;
+    align-self: center; 
+    width: fit-content;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9em;
+    color: var(--text-secondary);
+}
+
+
+/* --- Modal (Lightbox) Styles --- */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    padding-top: 20px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.95);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1000px;
+    animation-name: zoom;
+    animation-duration: 0.4s;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 15px 0;
+    font-size: 1.1rem;
+}
+
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.3s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(255, 255, 225, 0.1);
+}
+
+
+/* --- Mobile Responsive Styles --- */
+@media (max-width: 768px) {
+    .container {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .mount-types {
+        flex-direction: column;
+    }
+    
+    .mount-type img {
+        height: 200px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Stack products vertically */
+    }
+    
+    .extra-tv-images .thumbnail {
+        max-width: 45%;
+        height: 100px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    ul li strong {
+        margin-bottom: 5px;
+    }
+    .tv-price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    .tv-price .current-price, .tv-price .original-price {
+        margin-right: 0;
+    }
+    
+    .extra-tv-images {
+        gap: 10px;
+    }
+    .extra-tv-images .thumbnail {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+    
+    .calculator-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+
